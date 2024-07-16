@@ -1,4 +1,5 @@
 import About from "./About";
+import TechnicalSkills from "./TechSkills";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
 
       {/*  */}
       <About />
+      <TechnicalSkills />
     </div>
   );
 }
