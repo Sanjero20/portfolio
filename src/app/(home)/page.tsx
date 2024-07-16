@@ -1,4 +1,5 @@
 import About from "./About";
+import Projects from "./Projects";
 import TechnicalSkills from "./TechSkills";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       {/*  */}
       <About />
       <TechnicalSkills />
+      <Projects />
     </div>
   );
 }
