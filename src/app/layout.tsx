@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body
-        className={`${montserrat.className} mx-auto w-full px-2 sm:px-0 md:w-[768px]`}
+        className={`${montserrat.className} mx-auto w-full max-w-xl space-y-4 px-6 py-4 sm:px-0`}
       >
         <Header />
         {children}
