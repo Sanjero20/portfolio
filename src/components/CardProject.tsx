@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   title: string;
@@ -9,18 +10,21 @@ interface Props {
 
 const CardProject = (props: Props) => {
   const { title, description, imgSrc, imgAlt } = props;
+  const project_url = title.toLowerCase().replaceAll(" ", "-");
 
   return (
-    <div className="card card-compact cursor-pointer rounded-xl bg-base-100 shadow-xl">
-      <figure>
-        <Image width={800} height={800} src={imgSrc} alt={imgAlt} />
-      </figure>
+    <Link href={`./projects/${project_url}`}>
+      <div className="card card-compact cursor-pointer rounded-xl bg-base-100 shadow-xl">
+        <figure>
+          <Image width={800} height={800} src={imgSrc} alt={imgAlt} />
+        </figure>
 
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <p>{description}</p>
+        <div className="card-body">
+          <h2 className="card-title">{title}</h2>
+          <p>{description}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
