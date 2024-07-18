@@ -14,7 +14,7 @@ const CardProject = (props: Props) => {
 
   return (
     <Link href={`./projects/${project_url}`}>
-      <div className="card card-compact cursor-pointer rounded-xl bg-base-100 shadow-xl">
+      <div className="card card-compact cursor-pointer rounded-lg bg-base-100 shadow-xl">
         <figure>
           <Image width={800} height={800} src={imgSrc} alt={imgAlt} />
         </figure>

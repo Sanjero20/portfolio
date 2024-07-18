@@ -14,7 +14,7 @@ function ProjectLayout({ children }: Props) {
 
   return (
     <div>
-      <div className="breadcrumbs text-sm">
+      <div className="breadcrumbs pt-0 text-sm">
         <ul>
           <li>
             <Link href={"/"}>Home</Link>

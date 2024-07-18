@@ -4,9 +4,7 @@ import { PROJECTS } from "@/data/projects";
 const ProjectsPage = () => {
   return (
     <div className="flex flex-col gap-4">
-      <div className="prose">
-        <p>Here is a list of my projects that i worked on and took apart on</p>
-      </div>
+      <p>Here is a list of my projects that i worked on and took apart on</p>
 
       {/* Solo Project */}
       <div className="grid gap-4 sm:grid-cols-2">
@@ -21,7 +19,7 @@ const ProjectsPage = () => {
         ))}
       </div>
 
-      {/*  */}
+      {/* Collaboration Project */}
     </div>
   );
 };

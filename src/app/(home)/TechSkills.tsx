@@ -2,13 +2,13 @@ import { TECHNICAL_SKILLS } from "@/data/skills";
 
 const TechnicalSkills = () => {
   return (
-    <section className="prose">
+    <section className="">
       <h2>Tech Stack</h2>
       <p>
         This are the technologies that I&apos;ve used for building projects:
       </p>
 
-      <div className="not-prose flex w-full flex-wrap gap-2">
+      <div className="flex w-full flex-wrap gap-2">
         {TECHNICAL_SKILLS.map((skill, index) => (
           <div
             key={index}
