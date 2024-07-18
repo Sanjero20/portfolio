@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <section className="">
+    <section>
       <h2>Projects</h2>
 
       <div className="not-prose grid gap-4 sm:grid-cols-2">

@@ -2,9 +2,9 @@ import { TECHNICAL_SKILLS } from "@/data/skills";
 
 const TechnicalSkills = () => {
   return (
-    <section className="">
+    <section>
       <h2>Tech Stack</h2>
-      <p>
+      <p className="mb-2">
         This are the technologies that I&apos;ve used for building projects:
       </p>
 

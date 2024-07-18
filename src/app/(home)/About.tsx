@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="">
+    <section>
       <h2>About me</h2>
 
       <div className="flex flex-col-reverse justify-between gap-4 md:flex-row">
@@ -17,7 +17,7 @@ const About = () => {
         <Image
           src="/avatar.jpg"
           alt="avatar"
-          className="not-prose w-40 rounded-lg md:w-36 lg:w-28"
+          className="mx-auto w-40 rounded-lg md:w-36 lg:w-28"
           width={100}
           height={100}
         />
