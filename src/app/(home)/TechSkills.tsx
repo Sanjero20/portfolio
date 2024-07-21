@@ -1,3 +1,4 @@
+import Badge from "@/components/Badge";
 import { TECHNICAL_SKILLS } from "@/data/skills";
 
 const TechnicalSkills = () => {
@@ -10,12 +11,7 @@ const TechnicalSkills = () => {
 
       <div className="flex w-full flex-wrap gap-2">
         {TECHNICAL_SKILLS.map((skill, index) => (
-          <div
-            key={index}
-            className="badge badge-outline badge-lg cursor-pointer hover:bg-neutral hover:text-white"
-          >
-            {skill}
-          </div>
+          <Badge key={index}>{skill}</Badge>
         ))}
       </div>
     </section>
