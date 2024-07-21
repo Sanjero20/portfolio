@@ -1,6 +1,8 @@
-import getProjectData from "@/utils/getProjectData";
 import Image from "next/image";
 import Link from "next/link";
+import getProjectData from "@/utils/getProjectData";
+import FeatureList from "./FeatureList";
+import TechList from "./TechList";
 
 interface Props {
   params: { title: string };
@@ -40,11 +42,11 @@ const ProjectInfoPage = ({ params }: Props) => {
 
       <p>{data.description}</p>
 
-      <h4>Features</h4>
-
       <h4>Tech Stack</h4>
+      <TechList techs={data.tech} />
 
-      <h4>Images</h4>
+      <h4>Features</h4>
+      <FeatureList features={data.features} />
     </div>
   );
 };
