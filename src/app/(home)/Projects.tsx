@@ -7,7 +7,7 @@ const Projects = () => {
     <section>
       <h2>Projects</h2>
 
-      <div className="not-prose grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2">
         {PROJECTS.map((project, index) => (
           <CardProject
             key={index}

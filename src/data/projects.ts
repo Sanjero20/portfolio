@@ -3,9 +3,11 @@ export interface ProjectType {
   description: string;
   imgSrc: string;
   imgAlt: string;
-  codeURL: string;
-  liveURL: string;
   tech: string[];
+  links: {
+    code: string;
+    live: string;
+  };
 }
 
 export const PROJECTS: ProjectType[] = [
@@ -15,9 +17,11 @@ export const PROJECTS: ProjectType[] = [
       "A full stack web application for monitoring job application status and interview schedules",
     imgSrc: "/job-tracker.png",
     imgAlt: "job tracker",
-    codeURL: "",
-    liveURL: "",
     tech: [],
+    links: {
+      code: "https://github.com/Sanjero20/job-tracker",
+      live: "https://job-tracker-0zfp.onrender.com/",
+    },
   },
   {
     title: "Geo Trainer PH",
@@ -25,8 +29,10 @@ export const PROJECTS: ProjectType[] = [
       "An interactive learning platform for memorizing the geolocation of the Philippines",
     imgSrc: "/geo-trainer-ph.png",
     imgAlt: "geo trainer",
-    codeURL: "",
-    liveURL: "",
     tech: [],
+    links: {
+      code: "https://github.com/Sanjero20/geo-trainer",
+      live: "https://geo-trainer-ph.vercel.app/",
+    },
   },
 ];
