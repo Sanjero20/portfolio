@@ -1,6 +1,6 @@
-import CardProject from "@/components/CardProject";
-import { PROJECTS } from "@/data/projects";
 import Link from "next/link";
+import CardProject from "@/components/CardProject";
+import { HIGHLIGHTED_PROJECT } from "@/data/projects";
 
 const Projects = () => {
   return (
@@ -8,7 +8,7 @@ const Projects = () => {
       <h2>Projects</h2>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        {PROJECTS.map((project, index) => (
+        {HIGHLIGHTED_PROJECT.map((project, index) => (
           <CardProject
             key={index}
             title={project.title}
