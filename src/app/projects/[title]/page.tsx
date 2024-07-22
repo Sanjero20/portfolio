@@ -21,7 +21,9 @@ const ProjectInfoPage = ({ params }: Props) => {
           src={data.imgSrc}
           alt={data.imgAlt}
           className="rounded-lg"
-          fill
+          width={1280}
+          height={720}
+          priority
         />
       </div>
 
