@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
-import getProjectData from "@/utils/getProjectData";
-import FeatureList from "./FeatureList";
+import ProjectLinks from "./ProjectLinks";
 import TechList from "./TechList";
+import SectionList from "./SectionList";
+import getProjectData from "@/utils/getProjectData";
 
 interface Props {
   params: { title: string };
@@ -14,7 +14,7 @@ const ProjectInfoPage = ({ params }: Props) => {
   if (!data) return <>This project does not exist</>;
 
   return (
-    <div className="prose prose-headings:my-2 prose-p:my-2">
+    <div className="prose prose-p:my-0">
       {/* Image */}
       <div className="not-prose relative aspect-video w-full bg-base-200">
         <Image
@@ -27,26 +27,21 @@ const ProjectInfoPage = ({ params }: Props) => {
 
       {/* Title  */}
       <div className="flex items-center justify-between">
-        <h3>{data.title}</h3>
+        <h3 className="my-4">{data.title}</h3>
 
-        <div className="flex gap-2">
-          <Link href={data.links.code} target="_blank">
-            <button className="btn btn-link">View Code</button>
-          </Link>
-
-          <Link href={data.links.live} target="_blank">
-            <button className="btn btn-link">Live Site</button>
-          </Link>
-        </div>
+        <ProjectLinks links={data.links} />
       </div>
 
       <p>{data.description}</p>
 
-      <h4>Tech Stack</h4>
+      <h4>Tech</h4>
       <TechList techs={data.tech} />
 
-      <h4>Features</h4>
-      <FeatureList features={data.features} />
+      <SectionList header="Features" data={data.features} />
+
+      {data.responsibilities && (
+        <SectionList header="Responsibilities" data={data.responsibilities} />
+      )}
     </div>
   );
 };
