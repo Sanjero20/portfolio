@@ -74,3 +74,5 @@ export const COLLAB_PROJECTS: ProjectType[] = [
 ];
 
 export const HIGHLIGHTED_PROJECT = [PROJECTS[0], PROJECTS[1]];
+
+export const ALL_PROJECTS = [...PROJECTS, ...COLLAB_PROJECTS];
